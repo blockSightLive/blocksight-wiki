@@ -60,32 +60,32 @@ Each agent has a defined role, reads from shared state files, and communicates t
 
 ## Explore the Architecture
 
-- [Component Bible](Component-Bible) -- Every component mapped to its spec, diagram, and source
-- [Data Flow](Data-Flow) -- Bitcoin Core to browser, end to end
-- [Cache Architecture](Cache-Architecture) -- L1 in-memory, L2 Redis, PostgreSQL persistence
-- [WebSocket Architecture](WebSocket-Architecture) -- Real-time event system
-- [Desktop Layout](Desktop-Layout) -- Triple-column dashboard
-- [Tablet Layout](Tablet-Layout) -- Dual-column responsive
-- [Phone Layout](Phone-Layout) -- Single-column mobile
+- [Component Bible](Architecture/Component-Bible) -- Every component mapped to its spec, diagram, and source
+- [Data Flow](Architecture/Data-Flow) -- Bitcoin Core to browser, end to end
+- [Cache Architecture](Architecture/Cache-Architecture) -- L1 in-memory, L2 Redis, PostgreSQL persistence
+- [WebSocket Architecture](Architecture/WebSocket-Architecture) -- Real-time event system
+- [Desktop Layout](Architecture/Desktop-Layout) -- Triple-column dashboard
+- [Tablet Layout](Architecture/Tablet-Layout) -- Dual-column responsive
+- [Phone Layout](Architecture/Phone-Layout) -- Single-column mobile
 
 ## Engineering Practices
 
-- [Test Strategy](Test-Strategy) -- 27K tests across unit, integration, E2E, chaos, k6
-- [ATDD Methodology](ATDD-Methodology) -- Acceptance-test-driven development with CEO specs
-- [Agent System](Agent-System) -- Multi-agent orchestration architecture
-- [DDD Architecture](DDD-Architecture) -- Domain-driven design with 22 backend domains
-- [CI/CD Pipeline](CI-CD-Pipeline) -- GitHub Actions to Vercel and Hetzner
+- [Test Strategy](Engineering/Test-Strategy) -- 27K tests across unit, integration, E2E, chaos, k6
+- [ATDD Methodology](Engineering/ATDD-Methodology) -- Acceptance-test-driven development with CEO specs
+- [Agent System](Engineering/Agent-System) -- Multi-agent orchestration architecture
+- [DDD Architecture](Engineering/DDD-Architecture) -- Domain-driven design with 22 backend domains
+- [CI/CD Pipeline](Engineering/CI-CD-Pipeline) -- GitHub Actions to Vercel and Hetzner
 
 ## Design System
 
-- [Design Tokens](Design-Tokens) -- 400+ CSS custom properties across 12 files
-- [Responsive Strategy](Responsive-Strategy) -- 3 breakpoints, variant system, mobile-first
-- [i18n Strategy](i18n-Strategy) -- 25 languages with lazy loading and currency mapping
+- [Design Tokens](Design/Design-Tokens) -- 400+ CSS custom properties across 12 files
+- [Responsive Strategy](Design/Responsive-Strategy) -- 3 breakpoints, variant system, mobile-first
+- [i18n Strategy](Design/i18n-Strategy) -- 25 languages with lazy loading and currency mapping
 
 ## About
 
-- [Technology Stack](Technology-Stack) -- Full stack overview
-- [The Vibe Coding Story](The-Vibe-Coding-Story) -- How one student built this with AI
-- [Statistics](Statistics) -- All the numbers, verified
-- [Production Metrics](Production-Metrics) -- Quality progression across 27 cycles
-- [Credits](Credits) -- The humans and tools behind BlockSight
+- [Technology Stack](About/Technology-Stack) -- Full stack overview
+- [The Vibe Coding Story](About/The-Vibe-Coding-Story) -- How one student built this with AI
+- [Statistics](About/Statistics) -- All the numbers, verified
+- [Production Metrics](About/Production-Metrics) -- Quality progression across 27 cycles
+- [Credits](About/Credits) -- The humans and tools behind BlockSight

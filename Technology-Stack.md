@@ -73,7 +73,7 @@ BlockSight is a full-stack TypeScript application connecting directly to Bitcoin
 | Frontend hosting | Vercel | Static deployment, edge CDN |
 | DNS + CDN | Cloudflare | DNS, DDoS protection, tunnel to backend |
 | CI/CD | GitHub Actions | Automated testing on push |
-| Monitoring | UptimeRobot | 5-endpoint availability monitoring |
+| Monitoring | UptimeRobot | 5-endpoint availability monitoring — [System Status](https://stats.uptimerobot.com/0stUweBL91) |
 | Search indexing | Google Search Console | SEO visibility |
 
 ---

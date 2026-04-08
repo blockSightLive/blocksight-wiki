@@ -65,6 +65,14 @@ Every UI component mapped to its specification, state machine diagram, system di
 | CEO Spec | Block Timers consolidated spec |
 | Format | MM:SS:cc (CEO-confirmed) |
 
+### TwoDBlockchain
+
+| Artifact | Description |
+|----------|-------------|
+| MVP | MVP-01 — 3-section orchestrator |
+| Tests | 81 total (main + branches + mempool-integration) |
+| Layout | Mempool (top) + Center (NextBlock+LastBlock) + Built (bottom) |
+
 ### VirtualizedBlockList
 
 | Artifact | Description |
@@ -72,7 +80,25 @@ Every UI component mapped to its specification, state machine diagram, system di
 | MVP | MVP-01 |
 | State Machine | VBL + Viewport Block Loader + Block Shift Manager |
 | System Diagram | Frontend Visualization Entity Mapping |
-| Lines of Code | ~700 lines |
+| Lines of Code | ~804 lines (largest FE component) |
+| Tests | 112 total (83 unit + 29 responsive — highest FE test count) |
+| Modes | Standard (vertical) + Hybrid (horizontal snake) |
+
+### BlockHistoryRow
+
+| Artifact | Description |
+|----------|-------------|
+| MVP | MVP-01 — horizontal snake rows |
+| Tests | 25 unit tests |
+| Pattern | Alternating LTR/RTL flex-direction, up to 7 blocks per row |
+
+### BlockChainLink
+
+| Artifact | Description |
+|----------|-------------|
+| MVP | MVP-01 — block connectors |
+| Tests | 30 unit tests (4 SVG directions, opacity boundary, path data-truth) |
+| Pattern | Bezier curve connectors: vertical, horizontal, corner-down-left, corner-down-right |
 
 ---
 
@@ -124,30 +150,57 @@ Every UI component mapped to its specification, state machine diagram, system di
 | State Machine | WebSocket Connection (HealthChip state reflects connection health) |
 | Components | Desktop `Header`, phone `MobileHeader` |
 
+### HomeBeacon
+
+| Artifact | Description |
+|----------|-------------|
+| MVP | MVP-01 |
+| State Machine | HomeBeacon State — 8 activation conditions, pure memoized hook |
+| Tests | 47 (27 unit + 20 hook) |
+| Status | Production Ready, Protected File |
+
 ### ToolBar (5 tools)
 
 | Artifact | Description |
 |----------|-------------|
 | Tools | Supply, General Metrics, Halving, Monica Metrics, Calculator |
+| Tests | 32 (18 unit + 6 context + 8 integration) |
 | Pattern | Expandable panel, desktop/tablet only |
 
 ---
 
 ## Mobile Components
 
+### MobileDashboard
+
+| Artifact | Description |
+|----------|-------------|
+| Pattern | Phone layout shell — orchestrates MobileBlockchainView + widgets |
+| Tests | 20 unit tests |
+
 ### MobileBottomSheet
 
 | Artifact | Description |
 |----------|-------------|
 | State Machine | Inherits from InfoPanel View Coordinator |
-| Pattern | Swipe to dismiss, replaces InfoPanel on phone + tablet |
+| Pattern | Swipe to dismiss (>60px threshold), 4 content types, 3 dismiss methods |
+| Tests | 29 unit tests |
 
-### MobileBlockCard + MobileBlockchainView
+### MobileBlockchainView
 
 | Artifact | Description |
 |----------|-------------|
-| Pattern | Compact block display, 3-section scroll (mempool / center / built) |
-| CEO Decision | Height-only on distant blocks (confirmed) |
+| Pattern | 3-section scroll (mempool / center / built), phone-only |
+| Tests | 9 unit tests |
+| CEO Decision | Height-only on distant blocks. NextBlock collision guard. |
+
+### MobileBlockCard
+
+| Artifact | Description |
+|----------|-------------|
+| Pattern | Compact block display, CEO pixel spec (170x109 to 51x31 progressive shrink) |
+| Tests | 13 unit tests |
+| CEO Decision | Height-only on distant blocks (index 3+) |
 
 ---
 

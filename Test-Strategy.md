@@ -2,18 +2,18 @@
 
 BlockSight's testing philosophy: **test on real data, not mocks**. E2E tests run against a live Bitcoin Core node with real blockchain data. When we assert that block 943,000 has the correct miner, we check against the actual Bitcoin network.
 
-## Production Metrics (PL-C26)
+## Production Metrics (PL-C30)
 
 | Metric | Result | Notes |
 |--------|--------|-------|
-| **E2E** | **97.4%** (558/573) | Live Bitcoin Core + Fulcrum + PostgreSQL |
-| **Playwright** | **80.5%** (207/257) | 3 viewports, 29 specs |
-| **k6 smoke** | **24/24** | 6th consecutive perfect score |
-| **Chaos** | **10/10** | First full-mode all-phases pass |
-| **Soak** | **0.04%** errors, p95 1.52ms | 60-minute sustained load |
-| **Coverage (BE)** | **91.79%** lines | 22 backend domains |
-| **Coverage (FE)** | **92.28%** lines | 5 frontend domains |
-| **Total tests** | **27,441** | Across 1,198 suites |
+| **E2E** | **98.1%** (566/577) | Live Bitcoin Core + Fulcrum + PostgreSQL |
+| **Playwright** | **72.5%** (211/291) | 3 viewports, 41 specs |
+| **k6 smoke** | **24/24** | 11th consecutive perfect score |
+| **Chaos** | **10/10** | All phases pass |
+| **Soak** | **0.00%** errors | 60-minute sustained load |
+| **Coverage (BE)** | **92.54%** lines | 22 backend domains |
+| **Coverage (FE)** | **93.47%** lines | 3 frontend domains |
+| **Total tests** | **28,857+** | Across 1,425+ suites |
 
 ## The Testing Pyramid
 
@@ -35,9 +35,9 @@ graph TB
 
 | Runner | Purpose | Scale |
 |--------|---------|-------|
-| Jest (unit) | Domain logic, transformers, hooks, services | 27,441 cases across 1,198 suites |
-| Jest (E2E) | Data accuracy, API contracts, WebSocket events | 573 tests against live infrastructure |
-| Playwright | Visual regression, responsive layouts, user journeys | 257 tests across 29 specs |
+| Jest (unit) | Domain logic, transformers, hooks, services | 28,857+ cases across 1,425+ suites |
+| Jest (E2E) | Data accuracy, API contracts, WebSocket events | 577 tests against live infrastructure |
+| Playwright | Visual regression, responsive layouts, user journeys | 291 tests across 41 specs |
 | k6 | Load, soak, and performance baselines | 24 checks (smoke/load/soak profiles) |
 | Chaos | Infrastructure resilience testing | 10 phases covering all dependencies |
 
@@ -90,9 +90,9 @@ Each phase: disrupt for 30s, verify graceful degradation (no crashes), restore, 
 |---------|-----|----------|---------------|
 | Smoke | 1 | 10s | 24/24 checks, p95 < 50ms |
 | Load | 50 | 2 min | 0.00% error rate |
-| Soak | 10 | 60 min | 0.04% errors, p95 1.52ms |
+| Soak | 10 | 60 min | 0.00% errors |
 
-The smoke test has achieved 24/24 for 6 consecutive production cycles.
+The smoke test has achieved 24/24 for 11 consecutive production cycles.
 
 ## Playwright Visual Testing
 
@@ -106,12 +106,23 @@ The smoke test has achieved 24/24 for 6 consecutive production cycles.
 
 Screenshots are captured at 3 viewports and compared daily using pixelmatch for visual regression detection.
 
+## Zod Runtime Validation
+
+TypeScript types disappear at runtime. Backend sends `{error: {code, message}}` but the frontend type says `error: string` — React renders `[object Object]` and crashes. Zod schemas catch this at the API boundary, before React ever sees it.
+
+- **79 safeParse calls** across 4 bridges (portal, CEO, CTO, CRM)
+- **25 schema files** in `@blocksight/shared-schemas` package
+- **42 WebSocket event schemas** for real-time data validation
+- **Fail-open design**: invalid data logs a warning but never throws — the app stays up
+
 ## Historical Progression
 
 | Cycle | E2E | k6 | Chaos | Coverage |
 |-------|-----|-----|-------|----------|
 | PL-C24 | 81.2% | 24/24 | 4/4 | BE 90.8% / FE 91.0% |
 | PL-C25 | 95.1% | 24/24 | 4/4 | BE 91.4% / FE 91.9% |
-| PL-C26 | **97.4%** | **24/24** | **10/10** | **BE 91.8% / FE 92.3%** |
+| PL-C26 | 97.4% | 24/24 | 10/10 | BE 91.8% / FE 92.3% |
+| PL-C28 | 97.7% | 24/24 | 10/10 | BE 91.8% / FE 92.3% |
+| PL-C30 | **98.1%** | **24/24** | **10/10** | **BE 92.5% / FE 93.5%** |
 
-Key improvements: try/catch removal exposed 22 hidden failures in PL-C24. Chaos expanded from 4 to 10 phases. Coverage sprint added 214 tests.
+Key improvements: try/catch removal exposed 22 hidden failures (PL-C24). Chaos expanded 4→10 phases. Zod runtime validation added (PL-C29). Coverage sprint +1,280 tests (PL-C30).

@@ -8,13 +8,15 @@ Every number on this page is sourced from the project's internal metrics system 
 
 | Layer | Files | Lines | Language |
 |-------|-------|-------|----------|
-| Backend source | 1,033 | 182,031 | TypeScript |
-| Frontend explorer source | 491 | 68,142 | TypeScript + TSX |
-| Frontend admin source | 85 | 12,009 | TypeScript + TSX |
-| Frontend portal source | 36 | 3,966 | TypeScript + TSX |
-| Backend tests | 973 | 369,359 | TypeScript |
-| Frontend tests | 575 | 169,069 | TypeScript + TSX |
-| **Total** | **3,193** | **804,576** | |
+| Backend source | 1,037 | 183,108 | TypeScript |
+| Frontend explorer source | 446 | 64,755 | TypeScript + TSX |
+| Frontend admin source | 87 | 12,666 | TypeScript + TSX |
+| Frontend portal source | 40 | 5,025 | TypeScript + TSX |
+| Shared schemas (Zod) | 25 | 2,527 | TypeScript |
+| Backend tests | 990 | 375,775 | TypeScript |
+| Frontend tests | 581 | 170,203 | TypeScript + TSX |
+| Shared schemas tests | 4 | 1,120 | TypeScript |
+| **Total** | **3,210** | **815,179** | |
 
 Language composition: 100% TypeScript (backend) and TypeScript + TSX (frontend). Zero JavaScript source files.
 
@@ -26,7 +28,7 @@ Language composition: 100% TypeScript (backend) and TypeScript + TSX (frontend).
 |--------|-------|
 | UI components | 90 |
 | Component variants (full/compact/mobile) | 15+ |
-| State machine diagrams | 94 |
+| State machine diagrams | 97 |
 | System architecture diagrams | 21 |
 | States documented across all SMDs | 410+ |
 | Transitions documented | 580+ |
@@ -38,8 +40,8 @@ Language composition: 100% TypeScript (backend) and TypeScript + TSX (frontend).
 
 | Metric | Count |
 |--------|-------|
-| **Total test cases** | **27,441** |
-| Total test suites (executable) | 1,395 |
+| **Total test cases** | **28,857+** |
+| Total test suites (executable) | 1,425+ |
 | Backend unit + integration suites | 608 |
 | Backend unit + integration cases | 14,423 |
 | Frontend unit + integration suites | 407 |
