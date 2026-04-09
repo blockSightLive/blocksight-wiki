@@ -81,7 +81,7 @@ Every UI component mapped to its specification, state machine diagram, system di
 | State Machine | VBL + Viewport Block Loader + Block Shift Manager |
 | System Diagram | Frontend Visualization Entity Mapping |
 | Lines of Code | ~804 lines (largest FE component) |
-| Tests | 112 total (83 unit + 29 responsive — highest FE test count) |
+| Tests | 195 total (166 unit + 29 responsive — highest FE test count) |
 | Modes | Standard (vertical) + Hybrid (horizontal snake) |
 
 ### BlockHistoryRow
@@ -191,7 +191,7 @@ Every UI component mapped to its specification, state machine diagram, system di
 | Artifact | Description |
 |----------|-------------|
 | Pattern | 3-section scroll (mempool / center / built), phone-only |
-| Tests | 9 unit tests |
+| Tests | 13 unit tests |
 | CEO Decision | Height-only on distant blocks. NextBlock collision guard. |
 
 ### MobileBlockCard
