@@ -47,7 +47,7 @@ Language composition: 100% TypeScript (backend) and TypeScript + TSX (frontend).
 | Frontend unit + integration suites | 407 |
 | Frontend unit + integration cases | 7,772 |
 | E2E test scenarios | 573 |
-| Playwright visual test scenarios | 257 |
+| Playwright visual test scenarios | 329+ |
 | k6 load test endpoints | 24 |
 | Chaos engineering scenarios | 10 |
 
@@ -61,18 +61,18 @@ Language composition: 100% TypeScript (backend) and TypeScript + TSX (frontend).
 
 ---
 
-## Production Quality (Current Best)
+## Production Quality (PL-C30 — Current Best)
 
 | Metric | Value | Notes |
 |--------|-------|-------|
-| E2E pass rate | **97.4%** (558/573) | Best ever |
-| Playwright pass rate | **80.5%** (207/257) | Up from 5.2% initial |
-| k6 smoke tests | **24/24 (100%)** | 6 consecutive perfect runs |
+| E2E pass rate | **98.1%** (566/577) | All-time best |
+| Playwright pass rate | **72.5%** (211/291) | +53% from PL-C29, 0 DNS errors |
+| k6 smoke tests | **24/24 (100%)** | 11th consecutive perfect score |
 | Chaos engineering | **10/10 PASS** | All failure scenarios survived |
-| Soak test error rate | **0.04%** | Down from 18.8% early cycles |
-| Backend line coverage | **91.79%** | Branch: 82.82% |
-| Frontend line coverage | **92.28%** | Branch: 83.91% |
-| Domain purity (backend) | **100%** | 0 impurities in 523 domain files |
+| Soak test error rate | **0.00%** | Zero errors over 60 minutes |
+| Backend line coverage | **92.54%** | +0.98% from PL-C29 |
+| Frontend line coverage | **93.47%** | +1.64%, branches 85.07% |
+| Domain purity (backend) | **100%** | 0 impurities in 526 domain files |
 | Architecture violations | **0** | dependency-cruiser enforced |
 | Startup errors | **0** | 0 errors, 0 warnings |
 

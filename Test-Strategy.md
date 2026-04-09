@@ -20,7 +20,7 @@ BlockSight's testing philosophy: **test on real data, not mocks**. E2E tests run
 ```mermaid
 graph TB
     A["Unit + Integration<br/>27,441 tests / 1,198 suites"] --> B["E2E (Live Blockchain)<br/>573 tests / 61 suites"]
-    B --> C["Playwright Visual<br/>257 tests / 29 specs"]
+    B --> C["Playwright Visual<br/>329+ tests / 41+ specs"]
     C --> D["k6 Performance<br/>24 checks (smoke/load/soak)"]
     D --> E["Chaos Engineering<br/>10 phases / 10 services"]
 
@@ -37,7 +37,7 @@ graph TB
 |--------|---------|-------|
 | Jest (unit) | Domain logic, transformers, hooks, services | 28,857+ cases across 1,425+ suites |
 | Jest (E2E) | Data accuracy, API contracts, WebSocket events | 577 tests against live infrastructure |
-| Playwright | Visual regression, responsive layouts, user journeys | 291 tests across 41 specs |
+| Playwright | Visual regression, responsive layouts, user journeys | 329+ tests across 41+ specs |
 | k6 | Load, soak, and performance baselines | 24 checks (smoke/load/soak profiles) |
 | Chaos | Infrastructure resilience testing | 10 phases covering all dependencies |
 
