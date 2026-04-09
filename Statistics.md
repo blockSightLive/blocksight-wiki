@@ -13,10 +13,10 @@ Every number on this page is sourced from the project's internal metrics system 
 | Frontend admin source | 95 | 12,897 | TypeScript + TSX |
 | Frontend portal source | 40 | 4,981 | TypeScript + TSX |
 | Shared schemas (Zod) | 47 | 4,307 | TypeScript |
-| Backend tests | 1,024 | 386,410 | TypeScript |
+| Backend tests | 1,023 | 386,176 | TypeScript |
 | Frontend tests | 603 | 173,621 | TypeScript + TSX |
 | Shared schemas tests | 15 | 4,051 | TypeScript |
-| **Total** | **3,317** | **834,715** | |
+| **Total** | **3,316** | **834,481** | |
 
 Language composition: 100% TypeScript (backend) and TypeScript + TSX (frontend). Zero JavaScript source files.
 
@@ -41,7 +41,7 @@ Language composition: 100% TypeScript (backend) and TypeScript + TSX (frontend).
 | Metric | Count |
 |--------|-------|
 | **Total test cases** | **28,857+** |
-| Total test suites (executable) | 1,477+ |
+| Total test suites (executable) | 1,476+ |
 | Backend unit + integration suites | 608 |
 | Backend unit + integration cases | 14,423 |
 | Frontend unit + integration suites | 407 |
@@ -61,22 +61,23 @@ Language composition: 100% TypeScript (backend) and TypeScript + TSX (frontend).
 
 ---
 
-## Production Quality (PL-C30 — Current Best)
+## Production Quality (PL-C31 — Current Best)
 
 | Metric | Value | Notes |
 |--------|-------|-------|
-| E2E pass rate | **98.1%** (566/577) | All-time best |
-| Playwright pass rate | **72.5%** (211/291) | +53% from PL-C29, 0 DNS errors |
-| k6 smoke tests | **24/24 (100%)** | 11th consecutive perfect score |
-| Chaos engineering | **10/10 PASS** | All failure scenarios survived |
-| Soak test error rate | **0.00%** | Zero errors over 60 minutes |
-| Backend line coverage | **92.54%** | +0.98% from PL-C29 |
-| Frontend line coverage | **93.47%** | +1.64%, branches 85.07% |
-| Domain purity (backend) | **100%** | 0 impurities in 526 domain files |
+| E2E pass rate | **94.1%** (570/606) | Contract 100/100 |
+| Playwright pass rate | **66.4%** (227/342) | Auth cascade regression |
+| k6 smoke tests | **24/24 (100%)** | 13th consecutive perfect score |
+| Resilience tests | **305/305 PASS** | 14 suites |
+| Soak test error rate | **0.00%** | Zero errors, p95=11.33ms |
+| Backend line coverage | **93.30%** | +1.92% from PL-C30 |
+| Frontend line coverage | **94.21%** | +2.28%, branches HIT target |
+| Total tests | **29,038** | +1,811 from PL-C30 |
+| Domain purity (backend) | **100%** | 0 impurities in 528 domain files |
 | Architecture violations | **0** | dependency-cruiser enforced |
 | Startup errors | **0** | 0 errors, 0 warnings |
 
-See [[Production Metrics]] for the full progression across 27 production cycles.
+See [[Production Metrics]] for the full progression across production cycles.
 
 ---
 
