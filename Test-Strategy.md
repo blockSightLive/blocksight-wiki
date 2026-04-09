@@ -13,7 +13,7 @@ BlockSight's testing philosophy: **test on real data, not mocks**. E2E tests run
 | **Soak** | **0.00%** errors | 60-minute sustained load |
 | **Coverage (BE)** | **92.54%** lines | 22 backend domains |
 | **Coverage (FE)** | **93.47%** lines | 3 frontend domains |
-| **Total tests** | **28,857+** | Across 1,425+ suites |
+| **Total tests** | **29,500+** | Across 1,476+ suites |
 
 ## The Testing Pyramid
 
@@ -35,7 +35,7 @@ graph TB
 
 | Runner | Purpose | Scale |
 |--------|---------|-------|
-| Jest (unit) | Domain logic, transformers, hooks, services | 28,857+ cases across 1,425+ suites |
+| Jest (unit) | Domain logic, transformers, hooks, services | 29,500+ cases across 1,476+ suites |
 | Jest (E2E) | Data accuracy, API contracts, WebSocket events | 577 tests against live infrastructure |
 | Playwright | Visual regression, responsive layouts, user journeys | 329+ tests across 41+ specs |
 | k6 | Load, soak, and performance baselines | 24 checks (smoke/load/soak profiles) |

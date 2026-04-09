@@ -8,15 +8,15 @@ Every number on this page is sourced from the project's internal metrics system 
 
 | Layer | Files | Lines | Language |
 |-------|-------|-------|----------|
-| Backend source | 1,037 | 183,108 | TypeScript |
-| Frontend explorer source | 446 | 64,755 | TypeScript + TSX |
-| Frontend admin source | 87 | 12,666 | TypeScript + TSX |
-| Frontend portal source | 40 | 5,025 | TypeScript + TSX |
-| Shared schemas (Zod) | 25 | 2,527 | TypeScript |
-| Backend tests | 990 | 375,775 | TypeScript |
-| Frontend tests | 581 | 170,203 | TypeScript + TSX |
-| Shared schemas tests | 4 | 1,120 | TypeScript |
-| **Total** | **3,210** | **815,179** | |
+| Backend source | 1,041 | 183,217 | TypeScript |
+| Frontend explorer source | 449 | 64,717 | TypeScript + TSX |
+| Frontend admin source | 95 | 12,897 | TypeScript + TSX |
+| Frontend portal source | 40 | 4,981 | TypeScript + TSX |
+| Shared schemas (Zod) | 47 | 4,307 | TypeScript |
+| Backend tests | 1,024 | 386,516 | TypeScript |
+| Frontend tests | 602 | 173,188 | TypeScript + TSX |
+| Shared schemas tests | 15 | 4,051 | TypeScript |
+| **Total** | **3,313** | **833,874** | |
 
 Language composition: 100% TypeScript (backend) and TypeScript + TSX (frontend). Zero JavaScript source files.
 
@@ -28,7 +28,7 @@ Language composition: 100% TypeScript (backend) and TypeScript + TSX (frontend).
 |--------|-------|
 | UI components | 90 |
 | Component variants (full/compact/mobile) | 15+ |
-| State machine diagrams | 97 |
+| State machine diagrams | 99 |
 | System architecture diagrams | 21 |
 | States documented across all SMDs | 410+ |
 | Transitions documented | 580+ |
@@ -41,7 +41,7 @@ Language composition: 100% TypeScript (backend) and TypeScript + TSX (frontend).
 | Metric | Count |
 |--------|-------|
 | **Total test cases** | **28,857+** |
-| Total test suites (executable) | 1,425+ |
+| Total test suites (executable) | 1,476+ |
 | Backend unit + integration suites | 608 |
 | Backend unit + integration cases | 14,423 |
 | Frontend unit + integration suites | 407 |
