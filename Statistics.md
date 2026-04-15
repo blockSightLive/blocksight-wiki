@@ -8,15 +8,15 @@ Every number on this page is sourced from the project's internal metrics system 
 
 | Layer | Files | Lines | Language |
 |-------|-------|-------|----------|
-| Backend source | 1,042 | 183,556 | TypeScript |
-| Frontend explorer source | 451 | 64,892 | TypeScript + TSX |
-| Frontend admin source | 95 | 12,897 | TypeScript + TSX |
-| Frontend portal source | 40 | 4,981 | TypeScript + TSX |
+| Backend source | 1,048 | 184,993 | TypeScript |
+| Frontend explorer source | 453 | 65,561 | TypeScript + TSX |
+| Frontend admin source | 123 | 19,623 | TypeScript + TSX |
+| Frontend portal source | 62 | 7,806 | TypeScript + TSX |
 | Shared schemas (Zod) | 47 | 4,307 | TypeScript |
-| Backend tests | 1,023 | 386,176 | TypeScript |
-| Frontend tests | 603 | 173,621 | TypeScript + TSX |
+| Backend tests | 1,132 | 400,650 | TypeScript |
+| Frontend tests | 681 | 176,323 | TypeScript + TSX |
 | Shared schemas tests | 15 | 4,051 | TypeScript |
-| **Total** | **3,316** | **834,481** | |
+| **Total** | **3,561** | **863,314** | |
 
 Language composition: 100% TypeScript (backend) and TypeScript + TSX (frontend). Zero JavaScript source files.
 
@@ -40,8 +40,8 @@ Language composition: 100% TypeScript (backend) and TypeScript + TSX (frontend).
 
 | Metric | Count |
 |--------|-------|
-| **Total test cases** | **28,857+** |
-| Total test suites (executable) | 1,476+ |
+| **Total test cases** | **30,000+** |
+| Total test suites (executable) | 1,607+ |
 | Backend unit + integration suites | 608 |
 | Backend unit + integration cases | 14,423 |
 | Frontend unit + integration suites | 407 |
@@ -61,19 +61,17 @@ Language composition: 100% TypeScript (backend) and TypeScript + TSX (frontend).
 
 ---
 
-## Production Quality (PL-C31 — Current Best)
+## Production Quality (PL-C38 — Current Best)
 
 | Metric | Value | Notes |
 |--------|-------|-------|
-| E2E pass rate | **94.1%** (570/606) | Contract 100/100 |
-| Playwright pass rate | **66.4%** (227/342) | Auth cascade regression |
-| k6 smoke tests | **24/24 (100%)** | 13th consecutive perfect score |
-| Resilience tests | **305/305 PASS** | 14 suites |
-| Soak test error rate | **0.00%** | Zero errors, p95=11.33ms |
-| Backend line coverage | **93.30%** | +1.92% from PL-C30 |
-| Frontend line coverage | **94.21%** | +2.28%, branches HIT target |
-| Total tests | **29,038** | +1,811 from PL-C30 |
-| Domain purity (backend) | **100%** | 0 impurities in 528 domain files |
+| E2E pass rate | **97.0%** (639/659) | ALL-TIME HIGH. Contract 51/51 |
+| k6 smoke tests | **24/24 (100%)** | Consecutive perfect score |
+| Soak test error rate | **0.00%** | Zero errors, all thresholds PASS |
+| Backend line coverage | **94.87%** | Target: 96% |
+| Frontend line coverage | **94.12%** | Target: 96% |
+| Total tests | **30,469+** | Across 1,607+ suites |
+| Domain purity (backend) | **100%** | 0 impurities in 530+ domain files |
 | Architecture violations | **0** | dependency-cruiser enforced |
 | Startup errors | **0** | 0 errors, 0 warnings |
 
@@ -114,9 +112,9 @@ See [[Production Metrics]] for the full progression across production cycles.
 
 | App | Files | Auth | MVPs Served |
 |-----|-------|------|-------------|
-| Public Explorer | ~491 | None (public) | MVP-01 to 05, 13-17, 24-25, 31 |
-| Admin Dashboard | ~85 | Session (bcrypt) | MVP-23, 27, 28, 32 |
-| Customer Portal | ~36 | Session (customer) | MVP-19, 20, 30, 33 |
+| Public Explorer | ~453 | None (public) | MVP-01 to 05, 13-17, 24-25, 31 |
+| Admin Dashboard | ~123 | Session (bcrypt) | MVP-23, 27, 28, 32 |
+| Customer Portal | ~62 | Session (customer) | MVP-19, 20, 30, 33 |
 
 ---
 
@@ -186,9 +184,9 @@ See [[Production Metrics]] for the full progression across production cycles.
 
 | Metric | Value |
 |--------|-------|
-| **Tasks completed** | **925+** |
+| **Tasks completed** | **1,370+** |
 | Specialized agents | 7 (MEGA, OMEGA, ALPHA, BETA, GAMMA, DELTA, LIMA) |
-| Production evaluation cycles | 27 |
+| Production evaluation cycles | 38 |
 | Maintenance cycle tools | 13 |
 | Languages translated by LIMA | 25 |
 | Agent task queues | 8 folders |
