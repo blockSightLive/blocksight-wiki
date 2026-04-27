@@ -6,6 +6,30 @@ Real-time Bitcoin blockchain explorer. API, WebSocket streaming, and webhook not
 
 ---
 
+## MCP — Use BlockSight inside Claude
+
+Read-only Bitcoin blockchain data inside Claude Desktop, Claude Code, and any MCP-compatible client — live blocks, transactions, addresses, fees, and network status, served from dedicated Bitcoin Core infrastructure. v1 is public and unauthenticated; no account, no API key.
+
+**Claude Desktop / Web (Custom Connectors)**: Settings → Connectors → Add custom connector. Fill two fields:
+
+| Field | Value |
+|-------|-------|
+| Name | `BlockSight.Live` |
+| URL  | `https://mcp.blocksight.live/mcp` |
+
+Leave OAuth fields empty. Click Add — the BlockSight tools become available in your next conversation.
+
+**Claude Code (CLI)**:
+
+```bash
+claude mcp add --transport http blocksight https://mcp.blocksight.live/mcp
+claude mcp list   # verify entry 'blocksight' with transport http
+```
+
+**Canonical install page**: [blocksight.live/claude](https://blocksight.live/claude) — full walkthrough, example prompts, troubleshooting, and the read-only contract (no key storage, no signing, no broadcasting).
+
+---
+
 ## For Developers
 
 Connect your application to live Bitcoin data:

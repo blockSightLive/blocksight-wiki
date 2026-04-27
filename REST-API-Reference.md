@@ -82,6 +82,8 @@ GET /api/v1/data/block/:height
 }
 ```
 
+**Latency**: Typical response is **1-5 ms** for any height from genesis to the current tip. Every enriched block is stored in BlockSight's persistence layer — there is no "recent window" versus "historical" split. Both `block.height` 0 and the chain tip are served from the same code path at the same speed.
+
 ### Transaction by TXID
 
 ```
